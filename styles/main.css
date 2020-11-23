@@ -3,7 +3,6 @@
   font-family: "GothamBook";
   src: url("../fonts/fonts/GothamBook.eot");
   src: local("GothamBook"), url("../fonts/fonts/GothamBook.woff") format("woff"), url("../fonts/fonts/GothamBook.ttf") format("truetype");
-  font-weight: italic;
 }
 @font-face {
   font-family: "gothambold1";
@@ -1067,7 +1066,6 @@ li {
   width: 336px;
   height: 224px;
   background-image: url("../img/gallery2.png");
-  background-position: cover;
 }
 @media screen and (max-width: 1450px) {
   .gallery__photos-second-block .photo-block2 {
