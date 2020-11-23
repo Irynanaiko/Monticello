@@ -1,0 +1,1289 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@font-face {
+	font-family: 'GothamBook';
+	src: url('../fonts/fonts/GothamBook.eot');
+    src: local('GothamBook'), url('../fonts/fonts/GothamBook.woff') format('woff'), url('../fonts/fonts/GothamBook.ttf') format('truetype');
+    font-weight: italic;
+}
+@font-face {
+	font-family: 'gothambold1';
+	src: url('../fonts/fonts/gothambold1.eot');
+    src: local('gothambold1'), url('../fonts/fonts/gothambold1.woff') format('woff'), url('../fonts/fonts/gothambold1.ttf') format('truetype');
+    font-weight: bold;
+}
+@font-face {
+	font-family: 'gothammedium';
+	src: url('../fonts/fonts/Gotham Medium Regular.ttf');
+    src: local('gothambold1'), url('../fonts/fonts/gotham-medium-webfont.woff') format('woff'), url('../fonts/fonts/Gotham\ Medium\ Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@import './_base';
+@import './_mixins';
+@import './_variables';
+
+.header {
+    background-image: url(../img/header-bg.png), linear-gradient(45deg, #55b7ff 0%, #7d59ff 100%);
+    background-position: top;
+    background-size: auto;
+    display: flex;
+    padding: 50px 150px 30px 150px;
+
+    @include mQ(1250px) {
+       padding: 25px 75px;
+    }
+
+    .open-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .burger {
+        display: none;
+        font-size: 42px;
+        position: relative;
+        top: -2px;
+        @include mQ(880px) {
+            display: block;
+            padding-left: 150px;
+        }
+
+         @include mQ(530px) {
+            padding-left: 100px;
+         }
+
+         @include mQ(320px) {
+            padding-left: 20px;
+         }
+    }
+
+    .burger-close {
+        position: absolute;
+        color: $main-color;
+        font-size: 18px;
+    }
+
+    .burger-menu {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        opacity: .7;
+        z-index: 3;
+        margin-top: 200px;
+        width: 400px;
+    }
+
+    .burger-menu li {
+        padding: 2rem;
+        text-align: center;
+        :hover {
+           background-color: $main-color;
+           color: #fff; 
+        }
+        a {
+            color: $main-color;
+            text-decoration: none;
+        }
+    }
+
+    &__wrapper {
+        @include flex;
+    }
+
+    &__logo {
+        justify-content: flex-start;
+    }
+
+    &__links {
+        margin-left: 100px;
+        justify-content: center;
+
+        @include mQ(1250px) {
+            margin-left: 50px;
+        }
+
+        @include mQ(1160px) {
+            margin-left: 10px;
+        }
+
+        @include mQ(880px) {
+            display: none;
+        }
+        
+        .dot {
+            display: inline-block;
+            max-width: 10px;
+            max-height: 10px;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            background-origin:content-box;
+        }
+    }
+
+    &__link {
+        padding-left: 60px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        margin-left: 10px;
+        letter-spacing: 4px;
+
+        @include mQ(1400px) {
+            padding-left: 30px;
+            margin-left: 0;
+        }
+
+        @include mQ(1100px) {
+            padding-left: 10px;
+            margin-left: 0;
+        }
+    }
+
+    &__social {
+        padding-left: 80px;
+        justify-content: flex-end;
+
+        @include mQ(1250px) {
+            padding-left: 40px;
+        }
+
+        @include mQ(1120px) {
+            padding-left: 10px;
+        }
+        @include mQ(880px) {
+            padding-left: 250px;;
+         }
+        @include mQ(320px) {
+            display: none;
+        } 
+
+        .social__icon {
+            padding-left: 20px;
+
+            @include mQ(1050px) {
+                padding-left: 6px;
+            }
+            span {
+                text-align: center;
+                color: #fff;
+                border: 1px solid #fff;
+                border-radius: 100px;
+                padding: 6px;
+                margin: 0 auto;
+            }
+        }
+    }
+   
+
+    &__title {
+        text-align: center;
+        margin-top: 220px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+
+        @include mQ(1250px) {
+            margin-top: 180px;
+        }
+        @include mQ(1050px) {
+            margin-top: 80px;
+        }
+        @include mQ(880px) {
+            margin-top: 40px;
+        }
+        
+        .main-title {
+            font-size: 5.7rem;
+            font-weight: bold;
+
+            @include mQ(1250px) {
+                margin-top: 180px;
+                font-size: 5rem;
+            }
+
+            @include mQ(1200px) {
+                font-size: 4.8rem;
+                margin-top: 80px;
+            }
+
+            @include mQ(1050px) {
+                margin-top: 150px;
+                font-size: 4.5rem;
+            }
+            @include mQ(880px) {
+                font-size: 4rem;
+                margin-top: 40px;
+            }
+            @include mQ(880px) {
+                font-size: 3.4rem;
+            }
+            @include mQ(680px) {
+                font-size: 3rem;
+            }
+            @include mQ(580px) {
+                font-size: 2.5rem;
+            }
+            @include mQ(380px) {
+                font-size: 2rem;
+            }
+        }
+
+        .main-subtitle {
+            font-size: 1.2rem;
+            font-weight: normal;
+            margin-top: 60px;
+
+            @include mQ(1250px) {
+                font-size: 1rem; 
+            }
+
+            @include mQ(1050px) {
+                font-size: .8rem;
+            }
+            @include mQ(880px) {
+                margin-top: 30px;
+            }
+            @include mQ(680px) {
+                font-size: .6rem;
+            }
+            @include mQ(570px) {
+                font-size: .45rem;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    &__slider {
+        text-align: center;
+        margin-top: 240px;
+        padding-bottom: 35px;
+        font-size: 1.6rem;
+
+        @include mQ(1250px) {
+            margin-top: 150px;
+        }
+       
+        @include mQ(1050px) {
+            margin-top: 120px;
+        }
+
+        @include mQ(880px) {
+            margin-top: 90px;
+            font-size: 1.3rem;
+        }
+       
+        @include mQ(550px) {
+            margin-top: 60px;
+        }
+        @include mQ(380px) {
+            margin-top: 30px;
+            font-size: 1rem;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        span {
+            border: 1px solid #fff;
+            border-radius: 50px;
+            padding: 5px;
+            cursor: pointer;
+
+            @include mQ(1250px) {
+                margin-top: 150px;
+            }
+           
+            @include mQ(1050px) {
+                margin-top: 120px;
+            }
+    
+            @include mQ(880px) {
+                margin-top: 90px;
+            }
+           
+            @include mQ(550px) {
+                margin-top: 60px;
+            }
+            @include mQ(380px) {
+                margin-top: 30px;
+            } 
+        }
+    }
+
+    &__sidepanel {
+        display: flex;
+        flex-direction: column;
+        margin-top: 260px;
+        align-items: flex-end;
+
+        @include mQ(880px) {
+            display: none;
+        }
+        .elipse {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.projects {
+    margin-top: 80px;
+    color: $main-color;
+
+    @include mQ(1250px) {
+        margin-top: 70px;  
+    }
+   
+    @include mQ(1050px) {
+        margin-top: 60px;
+    }
+
+    @include mQ(880px) {
+        margin-top: 40px;
+    }
+   
+    @include mQ(550px) {
+        margin-top: 30px;
+    }
+    @include mQ(380px) {
+        margin-top: 20px;
+    } 
+
+    .line {
+        max-width: 100px;
+        border-bottom: 1px solid $main-color;
+        margin: 0 auto;
+
+        @include mQ(1250px) {
+            width: 1250px; 
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        margin-top: 25px;
+        font-size: 3.1429rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include mQ(1250px) {
+            font-size: 3rem;
+            width: 1250px; 
+            text-align: center; 
+        }
+       
+        @include mQ(1050px) {
+            width: 1050px;
+            margin-top: 20px;
+            font-size: 2.8rem;
+        }
+
+        @include mQ(880px) {
+            width: 880px;
+            font-size: 2.6rem;
+        }
+
+        @include mQ(630px) {
+            width: 630px;
+        }
+       
+        @include mQ(550px) {
+            width: 550px;
+            margin-top: 10px;
+            font-size: 2.4rem;
+        }
+       
+        @include mQ(380px) {
+            width: 380px;
+            font-size: 2.2rem;
+        } 
+    }
+}
+
+.project__one {
+    display: flex;
+    margin-top: 100px;
+
+    @include mQ(750px) {
+        margin-top: 50px;
+        width: 750px;
+    }
+    @include mQ(680px) {
+       display: flex;
+       flex-direction: column;
+    }
+
+    .img {
+        position: relative;
+
+        .first {
+            width: 585px;
+            height: 470px;
+            background-color: #55b7ff; 
+
+            @include mQ(1100px) {
+                width: 250px;
+                height: 240px;
+            }
+        }
+
+        .second {
+            position: absolute;
+            margin: auto;
+            left: 140px;
+            top: 90px;
+           
+            @include mQ(1250px) {
+                left: 20px;
+                top: 20px;
+            }
+            
+            img {
+                @include mQ(1100px) {
+                    width: 250px;
+                 }
+            }
+            
+        }
+    }
+
+    .card {
+        padding-left: 200px;
+        margin-top: 120px;
+
+        @include mQ(1250px) {
+            padding-left: 60px;
+            margin-top: 100px;
+        }
+        @include mQ(1100px) {
+           margin-top: 0;
+        }
+        @include mQ(750px) {
+            padding-left: 30px;
+        }
+
+        .uppertitle {
+            font-size: 1.35rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: 'gothammedium';
+           
+            @include mQ(1100px) {
+                font-size: 1rem;
+            }
+        }
+
+        .title {
+            margin-top: 7px;
+            font-size: 1.5714rem;
+            text-transform: uppercase;
+            @include mQ(1100px) {
+               font-size: 1.3rem;
+            }
+        }
+
+        .subtitle {
+            width: 450px;
+            margin-top: 20px;
+            padding-bottom: 30px;
+            color: $accent-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 2.14rem;
+           
+            @include mQ(1100px) {
+                font-size: 1rem;
+                margin-top: 10px;
+                padding-bottom: 15px;
+            }
+           
+            @include mQ(700px) {
+                width: 350px;
+            }
+        }
+
+        .btn {
+            padding: 10px;
+            margin-top: 40px;
+            width: 190px;
+            height: 50px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: $main-color;
+            text-align: center;
+            border: 1px solid $main-color;
+            &:hover {
+                color: #fff;
+                background-color: $main-color;
+            } 
+        }
+        .location {
+            display: flex;
+            margin-top: 40px;
+            font-family: 'GothamBook';
+            font-size: 1.2rem;
+            line-height: 1.3636rem; 
+           
+            @include mQ(1100px) {
+                font-size: 1rem;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.project__two {
+    display: flex;
+    margin-top: 100px;
+
+    @include mQ(750px) {
+        margin-top: 50px;
+        width: 750px;
+    }
+    @include mQ(680px) {
+       display: flex;
+       flex-direction: column-reverse;
+    }
+
+    .img {
+        position: relative;
+       
+        .first { 
+            margin-left: 340px;
+            width: 585px;
+            height: 470px;
+            background-color: #7e5aff;
+            
+            @include mQ(1110px) {
+                width: 250px;
+                height: 240px;
+                margin-left: 150px;
+            }
+
+            @include mQ(920px) {
+                margin-left: 50px;
+            }
+        }
+
+        .second {
+            position: absolute;
+            margin: auto;
+            left: 140px;
+            top: 90px;
+
+            @include mQ(1250px) {
+                left: 300px;
+                top: 20px;
+            }
+
+            @include mQ(1100px) {
+                left: 120px;
+            }
+
+            @include mQ(920px) {
+                left: 20px;
+            }
+            
+            img {
+                @include mQ(1100px) {
+                    width: 250px;
+                }
+            }
+        }
+    }
+
+    .card {
+        padding-left: 140px;
+        margin-top: 120px;
+
+        @include mQ(1250px) {
+            padding-left: 60px;
+            margin-top: 100px;
+        }
+        @include mQ(1100px) {
+           margin-top: 0;
+           padding-left:60px ;
+        }
+        @include mQ(750px) {
+            padding-left: 30px;
+        }
+
+        .uppertitle {
+            font-size: 1.35rem;
+            text-transform: uppercase;
+            font-weight: 400;
+
+            @include mQ(1100px) {
+                font-size: 1rem;
+            }
+        }
+
+        .title {
+            margin-top: 7px;
+            font-size: 1.5714rem;
+            text-transform: uppercase;
+            @include mQ(1100px) {
+                font-size: 1.3rem;
+             }
+        }
+
+        .subtitle {
+            width: 450px;
+            margin-top: 20px;
+            padding-bottom: 30px;
+            color: $accent-color;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 2.14rem;
+
+            @include mQ(1100px) {
+                font-size: 1rem;
+                margin-top: 10px;
+                padding-bottom: 15px;
+            }
+           
+            @include mQ(700px) {
+                width: 350px;
+            }
+        }
+
+        .btn {
+            padding: 10px;
+            margin-top: 40px;
+            width: 190px;
+            height: 50px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: $main-color;
+            text-align: center;
+            border: 1px solid $main-color;
+            &:hover {
+                color: #fff;
+                background-color: $main-color;
+            } 
+        }
+        .location {
+            display: flex;
+            margin-top: 40px;
+            font-family: 'GothamBook';
+            font-size: 1.2rem;
+            line-height: 1.3636rem;
+            
+            @include mQ(1100px) {
+                font-size: 1rem;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.news {
+    margin-top: 150px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url(../img/bg-news.png), linear-gradient(45deg, #3b7fd3 0%, #23cbf9 100%);
+
+    &__title {
+        padding-top: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3.1429rem;
+        font-weight: 400;
+
+        @include mQ(1250px) {
+            width: 1250px;
+            padding-top: 30px;
+            font-size: 2.8rem;
+        }
+
+        @include mQ(1100px) {
+            width: 1250px;
+            padding-top: 20px;
+            font-size: 2.6rem;
+        }
+
+        @include mQ(980px) {
+            width: 980px;
+            padding-top: 15px;
+            font-size: 2.4rem;
+        }
+
+        @include mQ(680px) {
+            width: 680px;
+            padding-top: 10px;
+            font-size: 2.4rem;
+        }
+
+        @include mQ(520px) {
+            width: 520px;
+        }
+
+        @include mQ(320px) {
+            width: 320px;
+        }
+    }
+
+    &__line {
+        width: 100px;
+        border-bottom: 1px solid #fff;
+        margin: 0 auto;
+        padding-top: 130px;
+
+        @include mQ(1250px) {
+            display: none;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 100px;
+        padding-bottom: 180px;
+    }
+
+    &__item {
+        width: 370px;
+        margin-left: 30px;
+        min-height: 514px;
+        background: #fff;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, .25);
+
+        &-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        &-subtitle {
+            font-weight: bold;
+            color: $main-color;
+            font-size: 1.5714rem;
+            line-height: 1.5455rem;
+            padding: 0 20px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        &-descre {
+            font-family: 'Open Sans', sans-serif;
+            padding: 0 20px;
+            color: $accent-color;
+            line-height: 1.3636rem;
+            font-size: 1.2857rem;
+            margin-top: 15px;
+        }
+
+        &-feadback {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            margin-top: 25px;
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-icon-one {
+            width: 60px;
+            height: 60px;
+            border: 1px solid white;
+            border-radius: 50%;
+            background-size: cover;
+            background-position-y: top;
+            background: url('../img/news-icon1.png') no-repeat center;
+        }
+
+        &-icon-two {
+            width: 60px;
+            height: 60px;
+            border: 1px solid white;
+            border-radius: 50%;
+            background-size: cover;
+            background-position-y: top;
+            background: url('../img/news-icon2.png') no-repeat center;
+        }
+
+        &-icon-tree {
+            width: 60px;
+            height: 60px;
+            border: 1px solid white;
+            border-radius: 50%;
+            background-size: cover;
+            background-position-y: top;
+            background: url('../img/news-icon3.png') no-repeat center;
+        }
+
+        &-name {
+            margin-left: 10px;
+            font-size: 1.2857rem;
+            color: $main-color;   
+        }
+
+        &-data {
+            color: #55b7ff;
+            flex-direction: column;
+            padding-left: 8px;
+        }
+    }
+    &__icon {
+        font-size: 22px;
+        border: 1px solid #fff;
+        border-radius: 50px;
+        padding: 7px;
+        align-self: center;
+        margin-left: 40px;
+        cursor: pointer;
+    }
+
+    &__sidepanel {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        
+
+        .elipse {
+            padding-left: 20px;
+        }
+    }
+}
+
+.gallery {
+    padding: 140px 200px;
+
+    @include mQ(1510px) {
+        padding: 70px 20px;
+    }
+
+    @include mQ(680px) {
+        padding: 40px 20px;
+    }
+
+    @include mQ(560px) {
+        padding: 30px 20px;
+    }
+
+    @include mQ(320px) {
+        padding: 20px 10px;
+    }
+
+    &__line {
+        width: 100px;
+        border-bottom: 1px solid #2c4058;
+        margin: 0 auto;
+
+        @include mQ(1250px) {
+            display: none;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 3.1429rem;
+        color: $main-color;
+        text-transform: uppercase;
+        margin-top: 30px;
+
+        @include mQ(1250px) {
+            width: 1250px;
+            font-size: 3rem;
+        }
+
+        @include mQ(980px) {
+            width: 980px;
+            font-size: 2.6rem;
+        }
+
+        @include mQ(680px) {
+            width: 680px;
+            font-size: 2.4rem;
+        }
+
+        @include mQ(520px) {
+            width: 520px;
+            font-size: 2.2rem;
+        }
+
+        @include mQ(320px) {
+            width: 320px;
+            font-size: 2rem;
+        }
+    }
+
+    &__photos {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+        @include mQ(980px) {
+             grid-template-columns: 1fr;
+        }
+
+        &-first-block {
+            position: relative;
+
+            .world {
+                position: absolute;
+                margin: auto;
+                left: 0;
+                right: 0;
+                z-index: 2;
+                top:250px;
+            }
+
+            .big-photo {
+                @include mQ(720px) {
+                    width: 336px;
+                    height: 224px;
+               }
+            }
+        }
+
+        &-second-block {
+            display: flex;
+            gap:10px;
+
+            .photo-block1 {
+                @include mQ(1450px) {
+                    display: none;
+                }
+            }
+    
+            .bg-photos {
+                width: 336px;
+                height: 224px;
+                background-image: url("../img/gallery2.png");
+                background-position: cover;
+            }
+
+            .photo-block2 {
+                @include mQ(1450px) {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                @include mQ(1150px) {
+                    margin-left: -80px;   
+               }
+
+               @include mQ(1050px) {
+                    margin-left: -100px;   
+                }
+
+                @include mQ(980px) {
+                    flex-direction: row;
+                    margin-left: 0;   
+               }
+
+               @include mQ(720px) {
+                    flex-direction: column; 
+                }
+            }
+        }
+    }
+    &__btn {
+        width: 190px;
+        height: 50px;
+        background-color: #fff;
+        border:1px solid $main-color;
+        color: $main-color;
+        margin-top: 50px;
+        text-transform: uppercase;
+        padding: 10px;
+
+        &:hover {
+            color: #fff;
+            background-color: $main-color;
+        } 
+
+        @include mQ(1450px) {
+            margin-top: 30px;   
+       }
+
+        @include mQ(1150px) {
+             margin-top: 20px;   
+        }
+    }
+    &__btn-wrapper {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+       @include mQ(980px) {
+            width: 980px;   
+        }
+
+        @include mQ(720px) {
+            width: 720px;   
+        }
+
+        @include mQ(520px) {
+            width: 520px;   
+        }
+
+        @include mQ(420px) {
+            width: 420px;   
+        }
+
+        @include mQ(320px) {
+            width: 320px;   
+        }
+    }
+}
+
+#map {
+    width: 1600px;
+    height: 700px;
+    background-color: lemonchiffon;
+}
+
+.footer {
+    display: flex;
+    height: 524px;
+    background-image: url(../img/footerbg.png), linear-gradient(45deg, #55b7ff 0%, #7d59ff 100%);
+    padding: 200px 390px;
+
+    @include mQ(1250px) {
+        padding: 200px 40px;   
+    }
+
+    @include mQ(720px) {
+        flex-direction: column;
+    }
+
+    &__text-title {
+        display: flex;
+        margin-top: 50px;
+
+        @include mQ(520px) {
+            flex-direction: column;   
+        }
+        @include mQ(420px) {
+            gap: 10px;   
+        }
+    }
+
+    &__line {
+        width: 1px;
+        height: 20px;
+        margin: 0 20px;
+        border-left: 1px solid #fff;
+
+        @include mQ(520px) {
+            display: none;  
+        }
+    }
+
+    &__social {
+        padding-left: 200px;
+        justify-content: flex-end;
+
+        @include mQ(880px) {
+            padding-left: 100px;  
+        }
+
+        @include mQ(720px) {
+           margin-top: 20px;   
+        }
+
+        @include mQ(420px) {
+            padding-left: 0;  
+        }
+
+        .social__icon {
+            padding-left: 20px;
+            span {
+                text-align: center;
+                color: #fff;
+                border: 1px solid #fff;
+                border-radius: 100px;
+                padding: 6px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.modal-wrapper {
+    position: relative;
+}
+
+.modal {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    top: 0;
+    z-index: 1;
+    width: 770px;
+    height: 450px;
+    color: $main-color;
+    background: url(../img/formbg.png), linear-gradient(white, white);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    filter: drop-shadow(0px -4px 15px rgba(133,133,133,0.2));
+
+    @include mQ(1200px) {
+        right: 300px;
+    }
+    @include mQ(1050px) {
+        right: 400px;
+    }
+    @include mQ(980px) {
+        right: 550px;
+    }
+    @include mQ(900px) {
+        right: 700px;
+    }
+    @include mQ(830px) {
+        right: 800px;
+    }
+    @include mQ(780px) {
+        width: 500px;
+    }
+    @include mQ(640px) {
+        right: 1000px;
+    }
+    @include mQ(500px) {
+        right: 1100px;
+    }
+
+    &__line {
+        width: 100px;
+        border-bottom: 1px solid $main-color;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+
+    &__title {
+        padding-top: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3.1429rem;
+        font-weight: bold;
+        @include mQ(780px) {
+            padding-top: 10px;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+        padding: 50px 50px 70px 50px;
+        @include mQ(780px) {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        &-text {
+            @include mQ(780px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        
+            p {
+                margin-bottom: 35px;
+                font-size: 1.2857rem;
+                line-height: 1.5455rem;
+                font-weight: 400;
+                @include mQ(780px) {
+                    margin-top: 10px;
+                    font-size: .8rem;
+                    line-height: 1rem;
+                }
+            }
+        }
+
+        .icon-form {
+            color: #7e5aff;
+            font-size: 1.2857rem;
+            margin-right: 10px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+
+        @include mQ(780px) {
+            margin-left: 10px;
+        }
+    }
+
+    &__input {
+        margin-bottom: 40px;
+        border: 0;  
+        border-bottom: 1px solid #aaa;
+        width: 310px;
+        font-size: 1.2857rem;
+        font-family: "Gotham"; 
+        outline: none;
+        background: inherit;
+        line-height: 22px;
+        
+        &:focus {
+            color: #2c4058;
+            border-bottom: 1px solid #2c4058;
+            background: inherit;
+            font-size: 1.2857rem;
+            font-family: "Gotham"; 
+            line-height: 22px; 
+        }
+    }
+
+    &__btn {
+        width: 140px;
+        height: 50px;
+        background-color: #fff;
+        border:1px solid $main-color;
+        color: $main-color;
+        margin-top: 50px;
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 0 auto;
+
+        &:hover {
+            color: #fff;
+            background-color: $main-color;
+        } 
+    }
+    &__btn-wrapper {
+        text-align: end;
+    }
+}
+
+.up-slider {
+	width: 26px ;
+	height: 26px;
+	position: fixed;
+	bottom: 100px;
+	right: 5%;
+    z-index: 30;
+    padding: 10px;
+    font-size: 34px;
+	color: $main-color;
+	cursor: pointer;
+    transition: 1s all;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
