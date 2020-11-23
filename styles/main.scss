@@ -32,7 +32,14 @@
     @include mQ(1250px) {
        padding: 25px 75px;
     }
+    @include mQ(680px) {
+        padding: 25px 25px;
+     }
 
+     @include mQ(380px) {
+        padding: 15px 15px;
+     }
+ 
     .open-menu {
         display: flex;
         flex-direction: column;
@@ -54,8 +61,12 @@
             padding-left: 100px;
          }
 
+         @include mQ(420px) {
+            padding-left: 30px;
+         }
+
          @include mQ(320px) {
-            padding-left: 20px;
+            padding-left: 10px;
          }
     }
 
@@ -73,6 +84,10 @@
         z-index: 3;
         margin-top: 200px;
         width: 400px;
+        @include mQ(320px) {
+            margin-top: 220px;
+            margin-right: 120px;
+         }
     }
 
     .burger-menu li {
@@ -225,7 +240,8 @@
                 font-size: 2.5rem;
             }
             @include mQ(380px) {
-                font-size: 2rem;
+                font-size: 1.5rem;
+                text-align: center;
             }
         }
 
@@ -251,6 +267,9 @@
                 font-size: .45rem;
                 margin-top: 15px;
             }
+            @include mQ(320px) {
+                font-size: .35rem;
+             }
         }
     }
 
@@ -420,6 +439,10 @@
     .img {
         position: relative;
 
+        @include mQ(320px) {
+            padding-left: 10px;
+         }
+
         .first {
             width: 585px;
             height: 470px;
@@ -505,6 +528,9 @@
             @include mQ(700px) {
                 width: 350px;
             }
+            @include mQ(320px) {
+                width: 300px;
+             }
         }
 
         .btn {
@@ -532,6 +558,9 @@
             @include mQ(1100px) {
                 font-size: 1rem;
                 margin-top: 20px;
+            }
+            @include mQ(320px) {
+               font-size: .8rem;
             }
         }
     }
@@ -651,6 +680,9 @@
             @include mQ(700px) {
                 width: 350px;
             }
+            @include mQ(320px) {
+                width: 300px;
+            }
         }
 
         .btn {
@@ -667,6 +699,9 @@
                 color: #fff;
                 background-color: $main-color;
             } 
+            @include mQ(320px) {
+                margin-top: 20px;
+              }
         }
         .location {
             display: flex;
@@ -679,6 +714,9 @@
                 font-size: 1rem;
                 margin-top: 20px;
             }
+            @include mQ(320px) {
+                font-size: .8rem;
+              }
         }
     }
 }
@@ -688,6 +726,9 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-image: url(../img/bg-news.png), linear-gradient(45deg, #3b7fd3 0%, #23cbf9 100%);
+    @include mQ(320px) {
+        margin-top: 75px;
+      }
 
     &__title {
         padding-top: 40px;

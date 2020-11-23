@@ -77,6 +77,16 @@ li {
     padding: 25px 75px;
   }
 }
+@media screen and (max-width: 680px) {
+  .header {
+    padding: 25px 25px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .header {
+    padding: 15px 15px;
+  }
+}
 .header .open-menu {
   display: flex;
   flex-direction: column;
@@ -101,9 +111,14 @@ li {
     padding-left: 100px;
   }
 }
+@media screen and (max-width: 420px) {
+  .header .burger {
+    padding-left: 30px;
+  }
+}
 @media screen and (max-width: 320px) {
   .header .burger {
-    padding-left: 20px;
+    padding-left: 10px;
   }
 }
 .header .burger-close {
@@ -119,6 +134,12 @@ li {
   z-index: 3;
   margin-top: 200px;
   width: 400px;
+}
+@media screen and (max-width: 320px) {
+  .header .burger-menu {
+    margin-top: 220px;
+    margin-right: 120px;
+  }
 }
 .header .burger-menu li {
   padding: 2rem;
@@ -292,7 +313,8 @@ li {
 }
 @media screen and (max-width: 380px) {
   .header__title .main-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
   }
 }
 .header__title .main-subtitle {
@@ -324,6 +346,11 @@ li {
   .header__title .main-subtitle {
     font-size: 0.45rem;
     margin-top: 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header__title .main-subtitle {
+    font-size: 0.35rem;
   }
 }
 .header__slider {
@@ -515,6 +542,11 @@ li {
 .project__one .img {
   position: relative;
 }
+@media screen and (max-width: 320px) {
+  .project__one .img {
+    padding-left: 10px;
+  }
+}
 .project__one .img .first {
   width: 585px;
   height: 470px;
@@ -606,6 +638,11 @@ li {
     width: 350px;
   }
 }
+@media screen and (max-width: 320px) {
+  .project__one .card .subtitle {
+    width: 300px;
+  }
+}
 .project__one .card .btn {
   padding: 10px;
   margin-top: 40px;
@@ -632,6 +669,11 @@ li {
   .project__one .card .location {
     font-size: 1rem;
     margin-top: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .project__one .card .location {
+    font-size: 0.8rem;
   }
 }
 
@@ -762,6 +804,11 @@ li {
     width: 350px;
   }
 }
+@media screen and (max-width: 320px) {
+  .project__two .card .subtitle {
+    width: 300px;
+  }
+}
 .project__two .card .btn {
   padding: 10px;
   margin-top: 40px;
@@ -777,6 +824,11 @@ li {
   color: #fff;
   background-color: #2c4058;
 }
+@media screen and (max-width: 320px) {
+  .project__two .card .btn {
+    margin-top: 20px;
+  }
+}
 .project__two .card .location {
   display: flex;
   margin-top: 40px;
@@ -790,12 +842,22 @@ li {
     margin-top: 20px;
   }
 }
+@media screen and (max-width: 320px) {
+  .project__two .card .location {
+    font-size: 0.8rem;
+  }
+}
 
 .news {
   margin-top: 150px;
   background-repeat: no-repeat;
   background-position: bottom;
   background-image: url(../img/bg-news.png), linear-gradient(45deg, #3b7fd3 0%, #23cbf9 100%);
+}
+@media screen and (max-width: 320px) {
+  .news {
+    margin-top: 75px;
+  }
 }
 .news__title {
   padding-top: 40px;
